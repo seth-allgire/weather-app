@@ -1,0 +1,24 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  height: 30px;
+}
+
+.link {
+  margin: 2px;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  flex-basis: calc(25% - 4px);
+  background-color: rgb(255, 216, 143);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.link:hover {
+  background-color: rgb(255, 231, 187);
+}
+
+.active {
+  background-color: rgb(252, 188, 69);
+}
