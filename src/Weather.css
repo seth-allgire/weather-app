@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   height: 30px;
+  margin-bottom: 30px;
 }
 
 .link {
@@ -21,4 +22,40 @@
 
 .active {
   background-color: rgb(252, 188, 69);
+}
+
+.form-section {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px;
+  justify-content: center;
+}
+
+.form-label {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.form-input {
+  flex-basis: 25%;
+}
+
+.form-error {
+  color: red;
+  text-align: center;
+  font-style: italic;
+  min-height: 20px;
+  flex-basis: 100%;
+}
+
+.form-button {
+  width: 120px;
+  height: 25px;
+  margin-left: calc(50% - 40px);
+  margin-top: 5px;
+  background-color: rgb(252, 188, 69);
+}
+
+.form-button:hover {
+  background-color: rgb(255, 231, 187);
 }
