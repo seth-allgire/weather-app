@@ -46,11 +46,11 @@ function SearchPage({
           {error && !loading && <div>{error}</div>}
           {data &&
             !loading &&
-            forecast.map((val) => (
+            data.forecast.map((val) => (
               <WeatherDisplay
-                // key={val.location}
-                // location={val.location}
-                // current_temp={val.current_temp}
+                key={val.location}
+                location={val.location}
+                current_temp={val.current_temp}
                 forecast={val.forecast}
               />
             ))}

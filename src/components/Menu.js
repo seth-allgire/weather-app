@@ -6,27 +6,37 @@ import { clearUser, clearSearch, clearSavedLocation } from "../redux/actions";
 function Menu({ user, clearUser, clearSearch, clearSavedLocation }) {
   return (
     <nav className="menu">
-      <NavLink to="/login" activeClassName="active" className="link">
-        Login
-      </NavLink>
-      <NavLink to="/search" activeClassName="active" className="link">
-        Search
-      </NavLink>
-      <NavLink to="/savedLocations" activeClassName="active" className="link">
-        Saved Locations
-      </NavLink>
-      <NavLink
-        to="/login"
-        onClick={() => {
-          clearUser();
-          clearSearch();
-          clearSavedLocation();
-        }}
-        className="link"
-        activeClassName="active"
-      >
-        Logout
-      </NavLink>
+      {!user && (
+        <NavLink to="/login" activeClassName="active" className="link">
+          Login
+        </NavLink>
+      )}
+      {user && (
+        <>
+          <NavLink to="/search" activeClassName="active" className="link">
+            Search
+          </NavLink>
+          <NavLink
+            to="/savedLocations"
+            activeClassName="active"
+            className="link"
+          >
+            Saved Locations
+          </NavLink>
+          <NavLink
+            to="/login"
+            onClick={() => {
+              clearUser();
+              clearSearch();
+              clearSavedLocation();
+            }}
+            className="link"
+            activeClassName="active"
+          >
+            Logout
+          </NavLink>
+        </>
+      )}
     </nav>
   );
 }

@@ -14,7 +14,7 @@ export default function useFetch(search) {
       setData({});
       setError(null);
       try {
-        const url = `http://api.weatherapi.com/v1/current.json?key=6287e78fbd774a9daa0160527210110&q=${search}&aqi=no`;
+        const url = `http://api.weatherapi.com/v1/forecast.json?key=6287e78fbd774a9daa0160527210110&q=${search}&days=3&aqi=no&alerts=no`;
         const response = await fetch(url);
         const json = await response.json();
         let forecast = json.forecast.forecastday.map((val) => ({
