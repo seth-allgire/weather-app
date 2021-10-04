@@ -11,21 +11,22 @@ import LoginPage from "./components/LoginPage";
 import Menu from "./components/Menu";
 import SavedLocationsPage from "./components/SavedLocationsPage";
 import SearchPage from "./components/SearchPage";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <Router>
       <Menu />
       <Switch>
-        <Route path="/login">
+        <ProtectedRoute guarded={false} path="/login">
           <LoginPage />
-        </Route>
-        <Route path="/search">
+        </ProtectedRoute>
+        <ProtectedRoute guarded={true} path="/search">
           <SearchPage />
-        </Route>
-        <Route path="/savedLocations">
+        </ProtectedRoute>
+        <ProtectedRoute guarded={true} path="/savedLocations">
           <SavedLocationsPage />
-        </Route>
+        </ProtectedRoute>
         <Route path="*">
           <Redirect to="/login"></Redirect>
         </Route>

@@ -33,6 +33,11 @@ function SearchPage({
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         ></input>
+        <div className="form-error">
+          {error &&
+            searchInput.length < 3 &&
+            "Location must contain at least 3 characters"}
+        </div>
         <button className="form-button" onClick={() => setSearch(searchInput)}>
           Search
         </button>
