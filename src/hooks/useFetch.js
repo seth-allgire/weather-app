@@ -29,7 +29,7 @@ export default function useFetch(search) {
         };
         setData(data);
       } catch (e) {
-        setError(e);
+        setError("Something went wrong. Please try again.");
       } finally {
         setLoading(false);
       }

@@ -45,12 +45,13 @@ function SearchPage({
           {loading && <div>LOADING</div>}
           {error && !loading && <div>{error}</div>}
           {data &&
+            data.forecast &&
             !loading &&
             data.forecast.map((val) => (
               <WeatherDisplay
-                key={val.location}
-                location={val.location}
-                current_temp={val.current_temp}
+                key={idx}
+                location={data.location}
+                current_temp={data.current_temp}
                 forecast={val.forecast}
               />
             ))}

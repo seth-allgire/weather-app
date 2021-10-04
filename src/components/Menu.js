@@ -13,7 +13,7 @@ function Menu({ user, clearUser, clearSearch, clearSavedLocation }) {
       )}
       {user && (
         <>
-          <NavLink to="/search" activeClassName="active" className="link">
+          <NavLink to="/login" activeClassName="active" className="link">
             Search
           </NavLink>
           <NavLink

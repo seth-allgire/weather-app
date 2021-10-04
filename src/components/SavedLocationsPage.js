@@ -6,8 +6,7 @@ import WeatherDisplay from "./WeatherDisplay";
 function SavedLocationsPage(user, savedLocation, deleteSavedLocation) {
   return (
     <div>
-      <h3>Saved location for {user}:</h3>
-
+      <h3>Saved locations for {user}</h3>
       <WeatherDisplay />
     </div>
   );
