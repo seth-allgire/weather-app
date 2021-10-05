@@ -1,7 +1,7 @@
 import {
   ADD_SAVED_LOCATION,
   DELETE_SAVED_LOCATION,
-  CLEAR_SAVED_LOCATION,
+  CLEAR_SAVED_LOCATIONS,
 } from "../actions";
 
 export default function savedLocationReducer(state = [], action) {
@@ -10,7 +10,7 @@ export default function savedLocationReducer(state = [], action) {
       return [...state, action.weather];
     case DELETE_SAVED_LOCATION:
       return state.filter((weather) => weather.location !== action.location);
-    case CLEAR_SAVED_LOCATION:
+    case CLEAR_SAVED_LOCATIONS:
       return [];
     default:
       return state;

@@ -1,13 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
 import { deleteSavedLocation } from "../redux/actions";
-import WeatherDisplay from "./WeatherDisplay";
 
-function SavedLocationsPage(user, savedLocation, deleteSavedLocation) {
+function SavedLocationsPage({
+  user,
+  location,
+  region,
+  savedLocations,
+  deleteSavedLocation,
+}) {
   return (
     <div>
       <h3>Saved locations for {user}</h3>
-      <WeatherDisplay />
+
+      <div>{savedLocations}</div>
     </div>
   );
 }
@@ -15,7 +21,7 @@ function SavedLocationsPage(user, savedLocation, deleteSavedLocation) {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
-    savedLocation: state.savedLocation,
+    savedLocations: state.savedLocations,
   };
 };
 

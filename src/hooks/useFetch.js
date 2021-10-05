@@ -21,9 +21,12 @@ export default function useFetch(search) {
           day: val.date,
           max: val.day.maxtemp_f,
           min: val.day.mintemp_f,
+          descr: val.day.condition.text,
+          icon: val.day.condition.icon,
         }));
         let data = {
           location: json.location.name,
+          region: json.location.region,
           forecast,
           current_temp: json.current.temp_f,
         };

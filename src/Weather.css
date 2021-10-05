@@ -59,3 +59,15 @@
 .form-button:hover {
   background-color: rgb(255, 231, 187);
 }
+
+.comp-header {
+  text-align: center;
+}
+
+.forecast-location {
+  margin-bottom: 10px;
+}
+
+.curr-temp {
+  font-weight: bold;
+}

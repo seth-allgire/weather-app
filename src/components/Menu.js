@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { clearUser, clearSearch, clearSavedLocation } from "../redux/actions";
+import { clearUser, clearSearch, clearSavedLocations } from "../redux/actions";
 
-function Menu({ user, clearUser, clearSearch, clearSavedLocation }) {
+function Menu({ user, clearUser, clearSearch, clearSavedLocations }) {
   return (
     <nav className="menu">
       {!user && (
@@ -28,7 +28,7 @@ function Menu({ user, clearUser, clearSearch, clearSavedLocation }) {
             onClick={() => {
               clearUser();
               clearSearch();
-              clearSavedLocation();
+              clearSavedLocations();
             }}
             className="link"
             activeClassName="active"
@@ -49,7 +49,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
   clearUser,
   clearSearch,
-  clearSavedLocation,
+  clearSavedLocations,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Menu);

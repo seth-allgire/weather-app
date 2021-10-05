@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { setUser } from "../redux/actions";
 
-function LoginPage() {
+function LoginPage({ setUser }) {
   const [error, setError] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
